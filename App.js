@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -29,7 +29,14 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.itemContainer}>
-        <View style={styles.leftContainer} />
+        <View style={styles.leftContainer}>
+          <Image
+            style={{ width: 100, height: 100 }}
+            source={{
+              uri: 'https://picsum.photos/id/237/200/300',
+            }}
+          />
+        </View>
         <View style={styles.rightContainer} />
       </View>
       <StatusBar style="auto" />
