@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, SafeAreaView, StyleSheet } from 'react-native';
 
@@ -13,7 +13,14 @@ const styles = StyleSheet.create({
 });
 
 export default function App() {
-  const [articles, setArticles] = useState(dummyArticles);
+  const [articles, setArticles] = useState([]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setArticles(dummyArticles);
+    }, 2000);
+    return () => clearImmediate(timer);
+  }, []);
+
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
