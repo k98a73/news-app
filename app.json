@@ -20,6 +20,7 @@
       "bundleIdentifier": "com.zelohas.new-app"
     },
     "android": {
+      "package" : "com.zelohas.newsapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
